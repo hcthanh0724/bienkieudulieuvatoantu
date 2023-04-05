@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Calculator</h1>
+<br>
+<input type="number" id="s1">
+<input type="number" id="s2">
+<br><br>
+<button type="button" onclick="addition()">Addition (+)</button>
+<button type="button" onclick="subtraction()">Subtraction (-)</button>
+<button type="button" onclick="multiplication()">Multiplication (X)</button>
+<button type="button" onclick="division()">Division (/)</button>
+<br>
+<div id="z1"></div>
+</body>
+</html>
+
+<script>
+    function addition(){
+        let a = document.getElementById("s1").value
+        let b = document.getElementById("s2").value
+        let ad = Number(a) + Number(b)
+      document.getElementById('z1').innerHTML = 'Result Addition:' +ad
+    }
+  function subtraction(){
+      let a = document.getElementById("s1").value
+      let b = document.getElementById("s2").value
+      let su = Number(a) + Number(b)
+      document.getElementById('z1').innerHTML = 'Result Subtraction:' +su
+  }
+  function multiplication(){
+      let a = document.getElementById("s1").value
+      let b = document.getElementById("s2").value
+      let mu = Number(a) * Number(b)
+      document.getElementById('z1').innerHTML = 'Result Multiplication:' +mu
+  }
+  function division(){
+      let a = document.getElementById("s1").value
+      let b = document.getElementById("s2").value
+      let di = Number(a) / Number(b)
+      document.getElementById('z1').innerHTML = 'Result Addition:' +di
+  }
+
+</script>
