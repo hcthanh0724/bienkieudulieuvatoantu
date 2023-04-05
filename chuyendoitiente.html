@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="">
+<table>
+  <tr>
+    <th>Amount</th>
+    <th>From currency</th>
+    <th>To currency</th>
+  </tr>
+  <tr>
+    <th><input type="number" id="k1"></th>
+    <th><select id="sl1">
+      <option value="a">VND</option>
+      <option value="b">USD</option>
+      <option value="c">AUD</option>
+      <option value="f">THB</option>
+    </select>
+    </th>
+    <th>
+      <select name="" id="sl2">
+        <option value="a">VND</option>
+        <option value="b">USD</option>
+        <option value="c">AUD</option>
+        <option value="f">THB</option>
+      </select>
+    </th>
+  </tr>
+</table>
+<button type="button" onclick="change()">Convert</button>
+<br><br>
+<div id="z1"></div>
+</form>
+</body>
+</html>
+
+<script>
+  function change (){
+  let value = document.getElementById('k1').value
+  let fromCurrency = document.getElementById('sl1').value
+  let toCurrency = document.getElementById('sl2').value
+
+    if(fromCurrency == toCurrency){
+      document.getElementById('z1').innerHTML = value
+    }
+    if(fromCurrency == "a" && toCurrency == "b"){
+      document.getElementById('z1').innerHTML = value /23000
+    }
+    if(fromCurrency == "a" && toCurrency == "c"){
+      document.getElementById('z1').innerHTML = value /15800
+    }
+    if(fromCurrency == "a" && toCurrency == "f"){
+      document.getElementById('z1').innerHTML = value /692
+    }
+    if(fromCurrency == "b" && toCurrency == "a"){
+      document.getElementById('z1').innerHTML = value * 23000
+    }
+    if(fromCurrency == "b" && toCurrency == "c"){
+      document.getElementById('z1').innerHTML = value * 1479
+    }
+    if(fromCurrency == "b" && toCurrency == "f"){
+      document.getElementById('z1').innerHTML = value * 33.95
+    }
+    if(fromCurrency == "c" && toCurrency == "a"){
+      document.getElementById('z1').innerHTML = value * 15800
+    }
+    if(fromCurrency == "c" && toCurrency == "b"){
+      document.getElementById('z1').innerHTML = value / 1479
+    }
+    if(fromCurrency == "c" && toCurrency == "f"){
+      document.getElementById('z1').innerHTML = value * 22978
+    }
+    if(fromCurrency == "f" && toCurrency == "a"){
+      document.getElementById('z1').innerHTML = value * 692
+    }
+    if(fromCurrency == "f" && toCurrency == "b"){
+      document.getElementById('z1').innerHTML = value / 1479
+    }
+    if(fromCurrency == "f" && toCurrency == "c"){
+      document.getElementById('z1').innerHTML = value / 22978
+    }
+
+  }
+</script>
